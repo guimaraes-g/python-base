@@ -14,4 +14,4 @@ for numero in numeros:
     print("Tabuada do:", numero)
     for outro_numero in numeros:
         print(numero, "x", outro_numero, "=",numero * outro_numero)
-    print("---------------")
+    print("-" * 12)
