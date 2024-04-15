@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Learning: output, shebang, comments,
+# Learning: output, shebang, comments, imports, 
 
 """
 Helo World Multi Linguas.
@@ -41,3 +41,4 @@ elif current_language == "fr_FR":
     msg = "Bonjour Monde"
 
 print(msg)
+

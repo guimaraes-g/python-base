@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+# Learning: String format
+
+"""
+
+Criando mensagens personalizadas.
+
+String concatenation aka how to put strings together.
+
+Suppose we want to create a string that says "subscribe for ___"
+
+"""
+
+#a few ways to do this
+
+youtuber = "freeCodeCamp.org" #some string variable
+
+print("subscribe to " + youtuber)
+print("subscribe to {}".format(youtuber))
+print(f"subscribe to {youtuber}")
