@@ -15,7 +15,19 @@ Suppose we want to create a string that says "subscribe for ___"
 #a few ways to do this
 
 youtuber = "freeCodeCamp.org" #some string variable
+learning_1 = "java"
+learning_2 = "python"
+learning_3 = "sql"
 
-print("subscribe to " + youtuber)
-print("subscribe to {}".format(youtuber))
-print(f"subscribe to {youtuber}")
+print("subscribe to " + youtuber + " if you wanna learn " + learning_1 + ", " + learning_2 + " or " + learning_3)
+print("subscribe to {} if you wanna learn {}, {} or {}".format(youtuber, learning_1, learning_2, learning_3))
+print(f"subscribe to {youtuber} if you wanna learn {learning_1}, {learning_2} or {learning_3}")
+
+adj = input("Adjective: ")
+verb1 = input("Verb: ")
+verb2 = input("Verb: ")
+famous_person = input("Famous person: ")
+
+madlib = f"Computer programming is so {adj}! It makes me so excited all the time because i love to {verb1}. Stay hydrated and {verb2} like you are {famous_person}!"
+
+print(madlib)
