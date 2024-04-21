@@ -17,22 +17,23 @@ import random
 
 def guess(x):
     random_number = random.randint(1,x)
-    guesser = random.randint(1,x)
+    guesser = x/2
     guess = 0
     loop_count = 0
     print(f"Guesser will guess a number between 1 and {x}: \n")
     while guess != random_number:
         loop_count += 1
-        print(f"The number is {guesser}")
+        guess = guesser
+        print(f"The number is {guess}")
         if guess < random_number:
             print("Sorry, Guesser. Guess again. Too low.")
-            guesser = random.randint(guesser,x)
+            guesser = int((x-guess)/2)
             guess = guesser
             print(f"Guesser will guess a number between 1 and {guess}: \n")
             print(f"His new guess is {guess}")
         elif guess > random_number:
             print("Sorry, guess again. Too hight.")
-            guesser = random.randint(1,guesser)
+            guesser = int(guess/2)
             guess = guesser
             print(f"Guesser will guess a number between 1 and {guess}: \n")
             print(f"His new guess is {guess}")
