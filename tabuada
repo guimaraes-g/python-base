@@ -2,29 +2,33 @@
 
 """Imprime a tabuada do 1 ao 10
 
+------------
 Tabuada do 1
-1
-2
-3
+1 x 1 : 1
+1 x 2 : 2
+1 x 3 : 3
 ...
 ------------
 Tabuada do 2
-1
-2
-3
+2 x 1 : 2
+2 x 2 : 4
+2 x 3 : 6
 ...
-
+############
 """
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__ = "Gustavo"
 
 # numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-numeros = list(range(1,11))
+numeros = list(range(1,101))
 
 # Iterable (percorríveis)
-# for : para
 for numero in numeros:
-	print("Tabuada do:", numero)
-	for outro_numero in numeros:
-		print(numero * outro_numero)
-	print("-" * 14)
+    titulo = "Tabuada do"
+    multiplicador = 0
+    print("-"*(len(titulo) + 1 + len(str(numero))))
+    print(titulo, numero)
+    for operacao in numeros:
+        multiplicador = multiplicador + 1
+        print(f"{numero} x {multiplicador} = {numero * multiplicador}")
+    print("#"*(len(titulo) + 1 + len(str(numero))))
