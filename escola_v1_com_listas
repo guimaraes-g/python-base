@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+"""
+Exibe o relatório de crianças por atividade.
+
+Imprimir a lista de crianças agrupadas por sala
+que frequentam cada uma das atividades.
+
+"""
+
+__version__ = "0.1.0"
+
+# dados
+
+sala_1 = ['Erick', 'Maia', 'Gustavo', 'Manoel', 'Sofia', 'Joana']
+sala_2 = ['João', 'Antonio', 'Carlos', 'Maria', 'Isolda']
+
+aula_ingles = ['Erick', 'Maia', 'Joana', 'Carlos', 'Antonio']
+aula_musica = ['Erick', 'Carlos', 'Maria']
+aula_danca = ['Gustavo', 'Sofia', 'Joana', 'Antonio']
+
+atividades = [
+    ("Inglês", aula_ingles), 
+    ("Música", aula_musica), 
+    ("Dança", aula_danca)
+] 
+
+# imprimir alunos em cada atividade por sala
+# inglês
+
+for atividade in atividades:
+    print(f"    Alunos da aula de {atividade[0]}")
+    aula_sala_1 = []
+    aula_sala_2 = []
+    for aluno in atividade[1]:
+    	if aluno in sala_1:
+    		aula_sala_1.append(aluno)
+    	elif aluno in sala_2:
+    		aula_sala_2.append(aluno)
+    print(f"--> {atividade[0]} sala 1", aula_sala_1)
+    print(f"--> {atividade[0]} sala 2", aula_sala_2)
+    print("-"*40)
